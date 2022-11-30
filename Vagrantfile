@@ -68,7 +68,9 @@ Vagrant.configure("2") do |config|
     cp /vagrant/mover.sh /usr/bin/
     chmod +x /usr/bin/mover.sh
     systemctl daemon-reload
+    systemctl enable filemover.service
     systemctl start filemover
+    
     
   SHELL
 end
